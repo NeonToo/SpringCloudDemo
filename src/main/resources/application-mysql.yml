@@ -1,7 +1,13 @@
 server:
   port: 9090
 
+info:
+  app:
+    name: spring-cloud-demo
+
 spring:
+  application:
+    name: microservice-provider-user
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/spring_cloud_demo?createDatabaseIfNotExist=true
@@ -12,3 +18,10 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: create
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9091/eureka/
+  instance:
+    prefer-ip-address: true
