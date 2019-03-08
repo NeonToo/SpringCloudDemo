@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+@EnableDiscoveryClient // this is a Eureka Client, use @EnableEurekaClient for Eureka only
 public class SpringCloudDemoApplication {
 
     @Bean
